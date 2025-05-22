@@ -1,0 +1,32 @@
+[
+  {
+    "Nume": "PC Gaming Amd",
+    "Pret": 4300.0,
+    "Descriere": "Sistem performant cu Ryzen 5 \u0219i RX 6600 XT.",
+    "Categorie": "desktop"
+  },
+  {
+    "Nume": "Laptop Business Dell",
+    "Pret": 3200.0,
+    "Descriere": "Laptop i5, 16GB RAM, SSD 512GB pentru munc\u0103 \u0219i birou.",
+    "Categorie": "laptop"
+  },
+  {
+    "Nume": "Imprimant\u0103 HP LaserJet",
+    "Pret": 890.0,
+    "Descriere": "Imprimant\u0103 laser monocrom\u0103 pentru birou.",
+    "Categorie": "imprimanta"
+  },
+  {
+    "Nume": "Mouse Redragon",
+    "Pret": 120,
+    "Descriere": "Mouse de gaming optic cu iluminare RGB",
+    "Categorie": "periferice"
+  },
+  {
+    "Nume": "Tastatura",
+    "Pret": 300,
+    "Descriere": "fain",
+    "Categorie": "periferice"
+  }
+]

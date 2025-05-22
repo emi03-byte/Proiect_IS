@@ -1,0 +1,16 @@
+<Window x:Class="MultiTab.ServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Formular Service" Height="400" Width="500"
+        WindowStartupLocation="CenterScreen" Background="#f4f4f4">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="?? Solicitare Service" FontSize="22" FontWeight="Bold" Foreground="#2c3e50" Margin="0,0,0,10"/>
+            <TextBox x:Name="NumeTextBox" Text="Numele t?u" Margin="0,5"/>
+            <TextBox x:Name="EmailTextBox" Text="Email de contact" Margin="0,5"/>
+            <TextBox x:Name="ProblemaTextBox" AcceptsReturn="True" Height="100" TextWrapping="Wrap" Margin="0,5" Text="Descrie problema"/>
+            <Button Content="Trimite cererea" Width="150" Margin="0,10" Click="TrimiteCerere_Click"
+                    Background="#27ae60" Foreground="White" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
