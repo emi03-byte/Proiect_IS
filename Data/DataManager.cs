@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
 using MultiTab.Models;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace MultiTab.Data
 {
     public class DataManager
     {
-        private static readonly string ManagerFilePath = "C:\\Users\\Darius\\Desktop\\Proiect_IS-master\\ManagerData.json";
+        private static readonly string ManagerFilePath = "C:\\Users\\Florian\\Desktop\\Proiect_IS-master\\ManagerData.json";
 
         public List<Angajat> Angajati { get; set; }
         public List<Promotie> Promotii { get; set; }
@@ -45,18 +45,17 @@ namespace MultiTab.Data
             File.WriteAllText(ManagerFilePath, json);
         }
 
-        // Autentificare Manager
         public Angajat AutentificaManager(string numeUtilizator, string parola)
         {
             return Angajati.FirstOrDefault(a => a.NumeUtilizator == numeUtilizator && a.Parola == parola && a.TipAngajat == "Manager");
         }
 
-        // Angajati
+    
         public bool AdaugaAngajat(Angajat angajat)
         {
             if (Angajati.Any(a => a.NumeUtilizator == angajat.NumeUtilizator))
             {
-                return false; // Angajat cu acelasi nume de utilizator exista deja
+                return false; 
             }
             Angajati.Add(angajat);
             SalveazaDateManager();
@@ -75,12 +74,12 @@ namespace MultiTab.Data
             return false;
         }
 
-        // Promotii
+     
         public bool AdaugaPromotie(Promotie promotie)
         {
             if (Promotii.Any(p => p.NumePromotie == promotie.NumePromotie))
             {
-                return false; // Promotie cu acelasi nume exista deja
+                return false; 
             }
             Promotii.Add(promotie);
             SalveazaDateManager();
@@ -99,8 +98,6 @@ namespace MultiTab.Data
             return false;
         }
     }
-
-    // Clasa container pentru deserializarea/serializarea JSON
     public class ManagerDataContainer
     {
         public List<Angajat> Angajati { get; set; }
