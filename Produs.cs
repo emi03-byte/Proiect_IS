@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace MultiTab
         public string Descriere { get; set; }
         public string Categorie { get; set; } // desktop, laptop, imprimanta, periferice, componente
 
+        public int Cantitate { get; set; } = 1;
     }
 
 }
