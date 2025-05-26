@@ -1,4 +1,4 @@
-﻿<Window x:Class="MultiTab.MainWindow"
+<Window x:Class="MultiTab.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Catalog Produse - Firma de Asamblare"
@@ -23,6 +23,7 @@
                 <Button Content="Imprimante" Click="Filtru_Click" Tag="imprimanta" Margin="3"/>
                 <Button Content="Periferice" Click="Filtru_Click" Tag="periferice" Margin="3"/>
                 <Button Content="Componente" Click="Filtru_Click" Tag="componente" Margin="3"/>
+                <Button Content="Promoții"   Click="Filtru_Click" Tag="promotii" Margin="3" />
             </StackPanel>
 
             <!-- Titlu catalog -->
