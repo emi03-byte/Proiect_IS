@@ -1,10 +1,5 @@
 [
   {
-    "Username": "admin",
-    "Password": "admin123",
-    "Rol": "admin"
-  },
-  {
     "Username": "user1",
     "Password": "pass123",
     "Rol": "user"
@@ -23,10 +18,5 @@
     "Username": "a",
     "Password": "1",
     "Rol": "user"
-  },
-  {
-    "Username": "Darius",
-    "Password": "team",
-    "Rol": "client"
   }
 ]
