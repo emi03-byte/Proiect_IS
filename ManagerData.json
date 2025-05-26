@@ -7,18 +7,6 @@
       "Email": "manager1@firma.com"
     },
     {
-      "NumeUtilizator": "angajat_junior",
-      "Parola": "junior_pass",
-      "TipAngajat": "Junior",
-      "Email": "junior@firma.com"
-    },
-    {
-      "NumeUtilizator": "angajat_senior",
-      "Parola": "senior_pass",
-      "TipAngajat": "Senior",
-      "Email": "senior@firma.com"
-    },
-    {
       "NumeUtilizator": "Florian",
       "Parola": "flo123",
       "TipAngajat": "Junior",
@@ -33,24 +21,14 @@
   ],
   "Promotii": [
     {
-      "NumePromotie": "Promoție Vară",
-      "Descriere": "Reducere la sisteme pre-asamblate",
+      "NumePromotie": "Promotie de Vara",
+      "Descriere": "Un super discount valabil acum!",
       "ArticoleIncluse": [
-        "Sistem PC Gaming X",
-        "Monitor UltraWide Z"
+        "Mouse Redragon",
+        "PC Gaming Amd"
       ],
-      "DataStart": "2024-06-01T00:00:00",
-      "DataSfarsit": "2024-08-31T23:59:59",
-      "DiscountProcent": 10.0
-    },
-    {
-      "NumePromotie": "Promotie Primăvară",
-      "Descriere": "Redeucere specială",
-      "ArticoleIncluse": [
-        "Laptop Business Dell"
-      ],
-      "DataStart": "2025-05-22T00:00:00",
-      "DataSfarsit": "2025-05-29T00:00:00",
+      "DataStart": "2025-05-25T00:00:00",
+      "DataSfarsit": "2025-06-19T00:00:00",
       "DiscountProcent": 10.0
     }
   ]
