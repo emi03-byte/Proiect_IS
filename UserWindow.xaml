@@ -16,7 +16,19 @@
                 <Button Content="🔧 Service" Width="120" Height="35" Click="DeschideService_Click"
                         Background="#3498db" Foreground="White" FontWeight="Bold" Margin="5,0"/>
             </StackPanel>
-
+            
+            <!-- Info utilizator și buton funcționalități avansate -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="0,0,0,15" VerticalAlignment="Center" >
+                <TextBlock x:Name="userInfoText" FontSize="16" FontWeight="Bold" Margin="10,0,20,0" VerticalAlignment="Center"/>
+                <Button x:Name="btnAvansat"
+                Content="Funcționalități Avansate"
+                Visibility="Collapsed"
+                Click="btnAvansat_Click"
+                Width="180"
+                Height="35"
+                Margin="10,0,0,0" />
+            </StackPanel>
+            
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <TextBlock Text="📦 Catalog Produse Disponibile" FontSize="24" FontWeight="Bold"
@@ -30,6 +42,7 @@
                         <Button Content="Imprimante" Click="Filtru_Click" Tag="imprimanta" Margin="3"/>
                         <Button Content="Periferice" Click="Filtru_Click" Tag="periferice" Margin="3"/>
                         <Button Content="Componente" Click="Filtru_Click" Tag="componente" Margin="3"/>
+                        
                     </StackPanel>
 
                     <ItemsControl x:Name="ListaProduseUser">

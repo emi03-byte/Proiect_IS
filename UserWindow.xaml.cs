@@ -13,9 +13,32 @@ namespace MultiTab
         private List<Produs> produse = new List<Produs>();
         private List<Produs> cosCumparaturi = new List<Produs>();
 
-        public UserWindow()
+        private string _numeAngajat;
+        private string _tipAngajat;
+
+        public UserWindow(string numeAngajat, string tipAngajat)
         {
             InitializeComponent();
+
+            _numeAngajat = numeAngajat;
+            _tipAngajat = tipAngajat;
+
+            // Setează titlul ferestrei cu info despre angajat
+            this.Title = $"Utilizator: {_numeAngajat} ({_tipAngajat})";
+
+            // Afișează numele și tipul angajatului într-un TextBlock (adaugă în XAML un TextBlock cu x:Name="userInfoText")
+            userInfoText.Text = $"Bine ai venit, {_numeAngajat} ({_tipAngajat})";
+
+            // Dacă angajatul este Senior, afișează butonul de funcționalități suplimentare
+            if (_tipAngajat.Equals("senior", StringComparison.OrdinalIgnoreCase))
+            {
+                btnAvansat.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnAvansat.Visibility = Visibility.Collapsed;
+            }
+
             IncarcaProduse();
         }
 
@@ -23,7 +46,7 @@ namespace MultiTab
         {
             try
             {
-                string caleFisier = "C:\\Users\\Darius\\Desktop\\Proiect_IS-master\\produse.json";
+                string caleFisier = "C:\\Users\\carun\\Downloads\\Proiect_IS-master\\Proiect_IS-master\\produse.json";
                 if (File.Exists(caleFisier))
                 {
                     string json = File.ReadAllText(caleFisier);
@@ -46,6 +69,7 @@ namespace MultiTab
             ServiceWindow fereastraService = new ServiceWindow();
             fereastraService.ShowDialog();
         }
+
         private void Filtru_Click(object sender, RoutedEventArgs e)
         {
             string categorie = (sender as Button)?.Tag.ToString();
@@ -78,6 +102,16 @@ namespace MultiTab
         {
             CosWindow cosWindow = new CosWindow(cosCumparaturi);
             cosWindow.ShowDialog();
+        }
+
+        // Buton pentru funcționalități avansate, vizibil doar pentru Seniori
+        private void btnAvansat_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Acces la funcționalități avansate pentru angajați Senior.", "Funcționalități Avansate", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            AdvancedFeaturesWindow fereastraAvansata = new AdvancedFeaturesWindow();
+            fereastraAvansata.ShowDialog();
+
         }
     }
 }
